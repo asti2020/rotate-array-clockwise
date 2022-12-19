@@ -1,4 +1,9 @@
 def rotate_array(arr, k)
+
+  return arr if arr.empty? || k.zero?
+  rotations = k % arr.length
+  removed = arr.slice!(arr.length - rotations, rotations)
+  removed + arr
   # type your code in here
 end
 

@@ -1,4 +1,7 @@
 function rotateArray(arr, k) {
+  const rotations = k % arr.length;
+  const removed = arr.splice(arr.length -rotations, rotations);
+  return removed.concat(arr);
   // type your code here
 }
 
